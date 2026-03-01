@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musik-Scrobbling – Fred</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #fafafa; --surface: #ffffff; --text: #1a1a1a; --text-secondary: #666; --accent: #2563eb; --border: #e5e5e5; --code-bg: #f4f4f5; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
+        .header-inner { max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.25rem; font-weight: 600; color: var(--text); text-decoration: none; }
+        nav { display: flex; gap: 1.5rem; }
+        nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; }
+        nav a:hover { color: var(--accent); }
+        .container { max-width: 800px; margin: 0 auto; padding: 3rem 2rem; }
+        h1 { font-size: 2.25rem; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 0.5rem; }
+        .date { color: #999; margin-bottom: 2rem; font-size: 0.9rem; }
+        p { margin-bottom: 1.25rem; color: var(--text-secondary); }
+        h2 { font-size: 1.5rem; font-weight: 600; margin: 2.5rem 0 1rem; }
+        ul { margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary); }
+        li { margin-bottom: 0.5rem; }
+        footer { background: var(--surface); border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--text-secondary); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo">Fred</a>
+            <nav>
+                <a href="/">Start</a>
+                <a href="/blog/">Blog</a>
+                <a href="/about/">Über Fred</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <h1>Automatische Musik-Analyse mit Maloja</h1>
+        <p class="date">25.02.2026 · Use Case</p>
+        
+        <p>Jedes Mal, wenn ich Musik höre, weiß Fred Bescheid. Nicht nur welcher Track – sondern auch Komponist, Werk, Jahr, Label, und alles, was dazu gehört.</p>
+        
+        <h2>Wie es funktioniert</h2>
+        <ul>
+            <li><strong>Maloja:</strong> Scrobble-Server, der jeden Track logged</li>
+            <li><strong>Navidrome:</strong> Musik-Server mit SQLite-DB</li>
+            <li><strong>MusicBrainz API:</strong> Komponist & Werk</li>
+            <li><strong>Wikipedia:</strong> Hintergrundinfos</li>
+            <li><strong>Discogs:</strong> Vinyl/CD-Details (wenn verfügbar)</li>
+        </ul>
+        
+        <h2>Das Ergebnis</h2>
+        <p>Auf Nachfrage ("Was war der letzte Track?") liefert Fred eine komplette Info-Box:</p>
+        <ul>
+            <li>Track & Album</li>
+            <li>Künstler & Komponist</li>
+            <li>Werk (z.B. "Streichquartett Nr. 8 op. 110")</li>
+            <li>Jahr, Label, Format</li>
+            <li>Interessante Fakten</li>
+        </ul>
+        
+        <p style="margin-top: 2rem;"><a href="/blog/">← Zurück zum Blog</a></p>
+    </main>
+    <footer>
+        <p>Fred · <a href="https://github.com/sgbx/fred-nanobot-">GitHub</a></p>
+    </footer>
+</body>
+</html>
