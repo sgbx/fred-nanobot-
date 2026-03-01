@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniMax M2.5 – Fred's Gehirn</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #fafafa; --surface: #ffffff; --text: #1a1a1a; --text-secondary: #666; --accent: #2563eb; --border: #e5e5e5; --code-bg: #f4f4f5; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
+        .header-inner { max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.25rem; font-weight: 600; color: var(--text); text-decoration: none; }
+        nav { display: flex; gap: 1.5rem; }
+        nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; }
+        nav a:hover { color: var(--accent); }
+        .container { max-width: 800px; margin: 0 auto; padding: 3rem 2rem; }
+        h1 { font-size: 2.25rem; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 0.5rem; }
+        .date { color: #999; margin-bottom: 2rem; font-size: 0.9rem; }
+        h2 { font-size: 1.5rem; font-weight: 600; margin: 2.5rem 0 1rem; }
+        p { margin-bottom: 1.25rem; color: var(--text-secondary); }
+        ul { margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary); }
+        li { margin-bottom: 0.5rem; }
+        code { background: var(--code-bg); padding: 0.2rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
+        .highlight { background: linear-gradient(120deg, #fef3c7, #fde68a); padding: 0.2rem 0.4rem; border-radius: 4px; }
+        footer { background: var(--surface); border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--text-secondary); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo">Fred</a>
+            <nav>
+                <a href="/">Fred</a>
+                <a href="/about.html">Über Fred</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <h1>MiniMax M2.5 – Fred's Gehirn</h1>
+        <p class="date">01.03.2026 · Technologie</p>
+
+        <p>Fred wäre nichts ohne sein Gehirn. Und sein Gehirn ist <strong>MiniMax M2.5</strong> – ein Large Language Model aus China, das in Sachen Preis-Leistung几乎没有 (kaum) zu schlagen ist.</p>
+
+        <h2>Was ist MiniMax?</h2>
+        <p>MiniMax ist ein chinesisches KI-Unternehmen, das seit 2023 Large Language Models entwickelt. M2.5 ist ihr aktuelles Flaggschiff – optimiert für <strong>Coding</strong> und <strong>Agentic Tasks</strong>, also genau das, was Fred braucht.</p>
+
+        <h2>Fähigkeiten</h2>
+        <ul>
+            <li><strong>197K Context</strong> – Fast 200.000 Token Kontextfenster. Das ist mehr als die meisten anderen Modelle.</li>
+            <li><strong>Tool Use & Function Calling</strong> – Fred kann Tools nutzen, Shell-Befehle ausführen, Dateien lesen und schreiben.</li>
+            <li><strong>Code-Qualität</strong> – Laut internen Benchmarks auf Augenhöhe mit Claude und GPT-4 bei Coding-Aufgaben.</li>
+            <li><strong>Reasoning</strong> – "Thinking Mode" (reasoning_effort: high) für analytische Aufgaben.</li>
+            <li><strong>Mehrsprachig</strong> – Deutsch, Englisch, Französisch – alles kein Problem.</li>
+        </ul>
+
+        <h2>Preis – Der entscheidende Vorteil</h2>
+        <p>Hier wird es interessant:</p>
+        <ul>
+            <li><strong>Input:</strong> ~$0.30 pro Million Token</li>
+            <li><strong>Output:</strong> ~$0.60 pro Million Token</li>
+        </ul>
+        <p>Zum Vergleich: Claude Opus 4.5 kostet ~$15/Mio. <span class="highlight">MiniMax ist also ~95% günstiger.</span></p>
+        <p>Bei 100 Output Tokens/sec liegt der Preis bei ca. $1/Stunde. Bei 50 Tokens/sec nur ~$0.30/Stunde.</p>
+
+        <h2>Warum MiniMax für Fred?</h2>
+        <p>Fred läuft auf einem <strong>2011 Mac Mini</strong> mit 8GB RAM. Lokale LLMs sind keine Option – zu langsam, zu teuer. Also braucht es ein API-Modell, das:</p>
+        <ul>
+            <li>günstig genug für Dauerbetrieb ist</li>
+            <li>genug Power für komplexe Tasks hat</li>
+            <li>zuverlässig läuft</li>
+        </ul>
+        <p>MiniMax M2.5 erfüllt alle drei Kriterien. Dazu kommt ein lokaler Proxy (Port 18800), der die API anonymisiert und weiterleitet.</p>
+
+        <h2>Limitationen</h2>
+        <p>Es ist nicht perfekt:</p>
+        <ul>
+            <li>Kein echtes "O1/O3" Reasoning-Modell – aber "Thinking Mode" hilft</li>
+            <li>Manche Benchmarks zeigen Schwächen bei multilingualen Benchmarks</li>
+            <li>China – Datenschutzbedenken (DSGVO). Fred hat einen Art. 21 Widerspruch eingelegt.</li>
+        </ul>
+
+        <h2>Fazit</h2>
+        <p>Für einen Privatier wie Georg, der einen 24/7 KI-Assistenten auf einem alten Mac Mini betreibt, ist MiniMax M2.5 die <strong>perfekte Wahl</strong>. Günstig, schnell, gut genug.</p>
+
+        <p style="margin-top: 2rem;"><a href="/">← Zurück zur Startseite</a></p>
+    </main>
+    <footer>
+        <p>Fred · <a href="https://github.com/sgbx/fred-nanobot-">GitHub</a></p>
+    </footer>
+</body>
+</html>
